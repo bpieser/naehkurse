@@ -13,6 +13,7 @@
   <link rel="stylesheet" type="text/css" href="css/general.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
 </head>
 
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
@@ -82,181 +83,51 @@
 <!-- Container (Kurse) -->
 <div id="kurse" class="container-fluid bg-grey">
   <div class="row">
-
     <div class="col-sm-12">
       <h2>Kurse</h2>
     </div>
 
     <div class="col-sm-12">
       <div class="panel-group">
-          <h4>Termine</h4>
-          <div class="panel panel-default">
-              <table class="table table-striped">
-                        <thead>
-                          <tr>
-                            <th>Kurs</th>
-                            <th>Datum</th>
-                            <th>Zeit</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>Anfängernähkurs KA</td>
-                            <td>19., 26. August und 02. September</td>
-                            <td>19-21 Uhr</td>
-                          </tr>
-                          <tr>
-                            <td>Anfängernähkurs AC</td>
-                            <td>20., 27. August und 03. September</td>
-                            <td>19-21 Uhr</td>
-                          </tr>
-                          <tr>
-                            <td>Taschenspezial mit Kate</td>
-                            <td>9., 16., 23. und 30. September</td>
-                            <td>19-21 Uhr</td>
-                          </tr>
-                          <tr>
-                            <td>Anfängernähkurs AD</td>
-                            <td>10., 17. und 24. September</td>
-                            <td>19-21 Uhr</td>
-                          </tr>
-                          <tr>
-                            <td>Wunschprojekt</td>
-                            <td>28. September</td>
-                            <td>19-21 Uhr</td>
-                          </tr>
-                          <tr>
-                            <td>Wunschprojekt</td>
-                            <td>01. Oktober</td>
-                            <td>19-21 Uhr</td>
-                          </tr>
-                          <tr>
-                            <td>Wunschprojekt</td>
-                            <td>08. Oktober</td>
-                            <td>19-21 Uhr</td>
-                          </tr>
-                          <tr>
-                            <td>Pulli nähen</td>
-                            <td>19., 26. Oktober und 02. November</td>
-                            <td>19-21 Uhr</td>
-                          </tr>
-                          <tr>
-                            <td>Kinderkleidung</td>
-                            <td>12., 19. und 26. November</td>
-                            <td>19-21 Uhr</td>
-                          </tr>
-                          <tr>
-                            <td>Anfängernähkurs AE</td>
-                            <td>22., 29. Oktober. und 05. November</td>
-                            <td>19-21 Uhr</td>
-                          </tr>
-                          <tr>
-                            <td>Anfängernähkurs AF</td>
-                            <td>09., 16. und 23. November</td>
-                            <td>19-21 Uhr</td>
-                          </tr>
-                          
-                        </tbody>
-              </table>
-            </div>
-            
-      </div>      
+        <h4>Termine</h4>
+        <div class="panel panel-default">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Kurs</th>
+                <th>Datum</th>
+                <th>Zeit</th>
+              </tr>
+            </thead>
+            <tbody id="courseTableBody">
+              <tr v-for="course in courses">
+                <td>{{course.name}}</td>
+                <td>{{course.date}}</td>
+                <td>19-21 Uhr</td>
+              </tr>    
+            </tbody>
+          </table>
+        </div>
+    
+      </div>
     </div>
   
-    <div class="col-sm-6 col-md-4 col-xs-12">
+    <div id="courseInfos">
+    <div class="col-sm-6 col-md-4 col-xs-12" v-for="info in infos">
       <div class="panel panel-default text-center">
         <div class="panel-heading">
-          <h3>Anfängernähkurs</h3>
+          <h3>{{info.name}}</h3>
         </div>
         <div class="panel-body">
-          <p>Ihr erlernt die Bedienung der Nähmaschine von Grund auf 
-            (Unterfaden aufspulen, einfädeln, geradeaus nähen, 
-            um die Ecke nähen, Schnittkanten versäubern...).
-            Als fertiges Werkstück entsteht ein gefüttertes Täschchen mit Reißverschluss.
-          </p>
-            <br />
-          <img src="pics/tasche.png" alt="Tasche" class="img-responsive img-center" />
+          <p>{{info.description}}</p>
+          <img :src="info.imgSource" class="img-responsive img-center" />
         </div>
         <div class="panel-footer">
-         <p><strong>€ 87</strong></p>
+         <p><strong>{{info.price}}</strong></p>
         </div>
       </div>      
     </div>
-
-    <div class="col-sm-6 col-md-4 col-xs-12">
-      <div class="panel panel-default text-center">
-        <div class="panel-heading">
-          <h3>Taschenspezial mit Kate</h3>
-        </div>
-        <div class="panel-body">
-          <p>Es werden verschiedene Schnittelemente und Schmuckelemente besprochen. 
-            Mit diesem Wissen und unter professioneller Anleitung werdet ihr euch zunächst eure eigene Schultertasche designen und anschließend nähen. 
-            Dabei werdet ihr lernen, wie ihr feste Stoffe wie Kunstleder, aber auch Reißverschlüsse, Gurtbänder und verschiedene Vliese verarbeitet.
-            Die Kursleiterin Kate hat jahrelang Taschen gewerblich designt und genäht und hat allerhand Insiderwissen.
-          </p>
-          <img src="pics/taschenspezial.png" alt="Taschenspezial" class="img-responsive img-center" />
-        </div>
-        <div class="panel-footer">
-         <p><strong>€ 116</strong></p>
-        </div>
-      </div>      
     </div>
-
-    <div class="col-sm-6 col-md-4 col-xs-12">
-        <div class="panel panel-default text-center">
-          <div class="panel-heading">
-            <h3>Pulli nähen</h3>
-          </div>
-          <div class="panel-body">
-            <p>Anhand eines gut passenden Pullovers wird ein individueller Schnitt erstellt.
-              Ihr erlernt die Verarbeitung von Sweatshirt-Stoff und Bündchenware.
-              Als fertiges Stück nehmt ihr einen schicken, neuen Pullover bzw. ein Pulli-Kleid mit nach Hause.
-            </p>
-            <br />
-            <img src="pics/pulli.png" alt="Pulli" class="img-responsive img-center" />
-          </div>
-          <div class="panel-footer">
-           <p><strong>€ 87</strong></p>
-          </div>
-        </div>      
-      </div>
-
-      <div class="col-sm-6 col-md-4 col-xs-12">
-        <div class="panel panel-default text-center">
-          <div class="panel-heading">
-            <h3>Kinderkleidung nähen</h3>
-          </div>
-          <div class="panel-body">
-            <p>Genäht wird mit dem Schnittmuster "Jogginganzug Maren" von Farbenmix. 
-              Dabei wählt ihr selber aus, ob ihr die Jogginghose oder -jacke aus dem Schnittset nähen wollt.
-            </p>
-            <br />
-            <img src="pics/stoffcollage.png" alt="Kinderkleidung" class="img-responsive img-center" />
-          </div>
-          <div class="panel-footer">
-           <p><strong>€ 87</strong></p>
-          </div>
-        </div>      
-      </div>
-
-       
-      <div class="col-sm-6 col-md-4 col-xs-12">
-        <div class="panel panel-default text-center">
-          <div class="panel-heading">
-            <h3>Mein Wunschprojekt</h3>
-          </div>
-          <div class="panel-body">
-            <p>Ihr braucht spezielle Hilfe mit einem Projekt oder wollt einfach noch ein paar Extraskills lernen? 
-              Dann sind die einzelnen Nähabende genau richtig für euch.
-              Ihr könnt die Abende einzeln buchen und besprecht vorher mit mir, was ihr gern machen möchtet.
-            </p>
-          </div>
-          <div class="panel-footer">
-            <p><strong>€ 29</strong></p>
-          </div>
-        </div>
-      </div>
-
 
     <div class="col-sm-12">
         <div class="panel-group">
@@ -284,7 +155,7 @@
         <div class="panel-heading">
           <h3>Privatnähkurse</h3>
         </div>
-        <div class="panel-body">
+        <div class="panel-body" style="min-height: 160px;">
           <p>Gern komme ich auch zum Nähen zu euch nach Hause. 
             Bei einer Person nehme ich 35€ die Stunde, seid ihr zu zweit, nehme ich 25€ pro Person pro Stunde. 
             Ruft mich einfach an und wir schauen zusammen im Kalender nach.
@@ -301,7 +172,7 @@
         <div class="panel-heading">
           <h3>Gutscheine</h3>
         </div>
-        <div class="panel-body">
+        <div class="panel-body" style="min-height: 160px;">
           <p>Natürlich ist es möglich die Nähkurse als Gutschein zu verschenken. 
             Besprecht mit mir eure Vorstellungen und ich stelle euch den Gutschein aus, den ihr braucht.
           </p>
@@ -377,46 +248,9 @@
     anne.pieser@gmail.com, 0174 7157599, Steuernummer: 25 / 471/00449</p>
 </footer>
 
-<script>
-  
-$(document).ready(function(){
-  // Add smooth scrolling to all links in navbar + footer link
-  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
-      // Prevent default anchor click behavior
-      event.preventDefault();
+<script src="vue.js"></script>
 
-      // Store hash
-      var hash = this.hash;
-
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 900, function(){
-   
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
-      });
-    } // End if
-  });
-  
-  $(window).scroll(function() {
-    $(".slideanim").each(function(){
-      var pos = $(this).offset().top;
-
-      var winTop = $(window).scrollTop();
-        if (pos < winTop + 600) {
-          $(this).addClass("slide");
-        }
-    });
-  });
-
-  
-})
-
-</script>
+<script src="index.js"></script>
 
 </body>
 </html>
