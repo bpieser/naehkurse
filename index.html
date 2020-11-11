@@ -32,7 +32,7 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#kurse">Kurse</a></li>
+        <li><a href="#courses">Kurse</a></li>
         <li><a href="#mehr">Angebote</a></li>
         <li><a href="#about">Über mich</a></li>    
         <li><a href="#adresse">Adresse</a></li>      
@@ -81,49 +81,45 @@
 </div>
 
 <!-- Container (Kurse) -->
-<div id="kurse" class="container-fluid bg-grey">
+<div id="courses" class="container-fluid bg-grey">
   <div class="row">
     <div class="col-sm-12">
       <h2>Kurse</h2>
     </div>
 
-    <div class="col-sm-12">
-      <div class="panel-group">
-        <h4>Termine</h4>
-        <div class="panel panel-default">
+    <div>
+    <div class="col-sm-6 col-md-4 col-xs-12" v-for="course in currentCourseList">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h3>{{course.name}}</h3>
+        </div>
+        <div class="panel-body">
+          <p>{{course.description}}</p>
+          <br />
+          <img :src="course.imgSource" class="img-responsive img-center" />
+          <br />
           <table class="table table-striped">
             <thead>
               <tr>
                 <th>Kurs</th>
-                <th>Datum</th>
+                <th>Termine</th>
                 <th>Zeit</th>
               </tr>
             </thead>
-            <tbody id="courseTableBody">
-              <tr v-for="course in courses">
-                <td>{{course.name}}</td>
-                <td>{{course.date}}</td>
+            <tbody>
+              <tr v-for="item in course.courseList">
+                <td>{{item.title}}</td>
+                <td>
+                  <p v-for="date in item.dates">{{getGermanDateFormat(date)}}</p>
+                </td>
                 <td>19-21 Uhr</td>
               </tr>    
             </tbody>
           </table>
-        </div>
-    
-      </div>
-    </div>
-  
-    <div id="courseInfos">
-    <div class="col-sm-6 col-md-4 col-xs-12" v-for="info in infos">
-      <div class="panel panel-default text-center">
-        <div class="panel-heading">
-          <h3>{{info.name}}</h3>
-        </div>
-        <div class="panel-body">
-          <p>{{info.description}}</p>
-          <img :src="info.imgSource" class="img-responsive img-center" />
+          
         </div>
         <div class="panel-footer">
-         <p><strong>{{info.price}}</strong></p>
+         <p><strong>{{course.price}}</strong></p>
         </div>
       </div>      
     </div>
