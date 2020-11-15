@@ -11,17 +11,17 @@ var app = new Vue({
                     {
                         "title": "AE",
                         "dates": [
-                            "2020-10-22",
-                            "2020-10-29",
-                            "2020-11-05"
+                            "2020-11-15",
+                            "2020-11-29",
+                            "2020-12-05"
                         ]
                     },
                     {
                         "title": "AF",
                         "dates": [
-                            "2020-11-09",
-                            "2020-11-16",
-                            "2020-11-23"
+                            "2020-12-09",
+                            "2020-12-16",
+                            "2020-12-23"
                         ]
                     }
                 ]
@@ -69,6 +69,16 @@ var app = new Vue({
         currentCourseList : function() {
             var list = []  
             this.courses.forEach(function(course){
+                var i;
+                for (i = course.courseList.length - 1; i >= 0; i--){
+                    if(course.courseList[i].dates.length > 0){
+                        var startDate = new Date(course.courseList[i].dates[0]);
+                        startDate.setDate(startDate.getDate() + 1);
+                        if (startDate - Date.now() < 0){
+                            course.courseList.splice(i, 1);
+                        }
+                    }
+                }
                 if (course.courseList.length > 0)
                     list.push(course)
             })
