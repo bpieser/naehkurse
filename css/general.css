@@ -75,7 +75,7 @@ h4 {
     background-color: #6e5eb8;
 }
 p.tinyspace {
-    margin: 0px 0 1px 0;
+    margin: 0px 0 2px 0;
     padding: 0;
 }
 img {
@@ -100,6 +100,8 @@ img {
   margin:0 auto;
   width: 75%;
   height: 75%;
+  max-width: 600px;
+  max-height: 600px;
 }
 .img-center-full {
     margin:0 auto;
