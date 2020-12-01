@@ -9,19 +9,51 @@ var app = new Vue({
                 "price" : "€ 87",
                 "courseList": [
                     {
-                        "title": "AE",
+                        "title": "A",
                         "dates": [
-                            "2020-11-15",
-                            "2020-11-29",
-                            "2020-12-05"
+                            "2021-01-11",
+                            "2021-01-18",
+                            "2021-01-25"
                         ]
                     },
                     {
-                        "title": "AF",
+                        "title": "B",
                         "dates": [
-                            "2020-12-09",
-                            "2020-12-16",
-                            "2020-12-23"
+                            "2021-02-08",
+                            "2021-02-15",
+                            "2021-02-22"
+                        ]
+                    },
+                    {
+                        "title": "C",
+                        "dates": [
+                            "2021-02-10",
+                            "2021-02-17",
+                            "2021-02-24"
+                        ]
+                    },
+                    {
+                        "title": "D",
+                        "dates": [
+                            "2021-03-01",
+                            "2021-03-08",
+                            "2021-03-15"
+                        ]
+                    },
+                    {
+                        "title": "E",
+                        "dates": [
+                            "2021-04-14",
+                            "2021-04-21",
+                            "2021-04-28"
+                        ]
+                    },
+                    {
+                        "title": "F",
+                        "dates": [
+                            "2021-04-15",
+                            "2021-04-22",
+                            "2021-04-29"
                         ]
                     }
                 ]
@@ -33,11 +65,89 @@ var app = new Vue({
                 "price" : "€ 87",
                 "courseList" : [
                     {
-                        "title": "PA",
+                        "title": "Pulli",
                         "dates": [
-                            "2020-10-19",
-                            "2020-10-26",
-                            "2020-11-02"
+                            "2021-01-14",
+                            "2021-01-21",
+                            "2021-01-28"
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Leggings",
+                "description": "Leggings sind nicht nur ultrabequem, sondern auch wirklich schnell genäht. Deswegen zeige ich euch in einem Mini-Kurs wie ihr Leggings auch mit einer ganz normalen Haushaltsnähmaschine selber machen könnt. Der Schnitt ist in verschiedenen Größen vorhanden.",
+                "imgSource" : "pics/leggings.png",
+                "price" : "€ 56",
+                "courseList" : [
+                    {
+                        "title": "Leggings",
+                        "dates": [
+                            "2021-02-11",
+                            "2021-02-18"
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "A-Linien-Rock",
+                "description": "Lernt in diesem Kurs, wie ihr einen A-Linien-Rock näht. Die Schnitte sind in verschiedenen Größen vorhanden und bei Bedarf zeig ich euch, wie ihr individuelle Anpassungen vornehmen könnt. Ganz nebenbei lernt ihr, wie ihr schöne Abnäher näht und wie nahtverdeckte Reißverschlüsse verarbeitet werden.",
+                "imgSource" : "pics/arock.png",
+                "price" : "€ 87",
+                "courseList" : [
+                    {
+                        "title": "Rock",
+                        "dates": [
+                            "2021-02-25",
+                            "2021-03-04",
+                            "2021-03-11"
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Weekender Tasche",
+                "description": "Es wird die Tasche “Pop the Corks” aus dem CUT-Magazin Nr12 genäht. Ihr erlernt die Verarbeitung von festen Materialien wie Canvas, Kork oder (Kunst-)Leder sowie von Gurtband, Karabinern, Reißverschlüssen und so weiter. Es handelt sich um eine größere Tasche mit kleinem Innenfach.",
+                "imgSource" : "pics/weekender.png",
+                "price" : "€ 112",
+                "courseList" : [
+                    {
+                        "title": "Weekender",
+                        "dates": [
+                            "2021-03-03",
+                            "2021-03-10",
+                            "2021-03-17",
+                            "2021-03-24"
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Mein Wunschprojekt",
+                "description": "Ihr braucht spezielle Hilfe mit einem Projekt oder wollt einfach noch ein paar Extraskills lernen? Dann sind die einzelnen Nähabende genau richtig für euch. Ihr könnt die Abende einzeln buchen und besprecht vorher mit mir, was ihr gern machen möchtet.",
+                "imgSource" : "pics/alleProdukte.png",
+                "price" : "€ 29",
+                "courseList" : [
+                    {
+                        "title": "Wunschprojekt",
+                        "dates": [
+                            "2021-03-18"
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "T-Shirt",
+                "description": "Anhand eines gut passenden T-Shirts wird ein individueller Schnitt erstellt. Ihr erlernt die Verarbeitung von Jersey und Bündchenware. Als fertiges Stück nehmt Ihr ein schickes, neues T-Shirt oder Shirt-Kleid mit nach Hause.",
+                "imgSource" : "pics/tshirt.png",
+                "price" : "€ 87",
+                "courseList" : [
+                    {
+                        "title": "Shirt",
+                        "dates": [
+                            "2021-04-12",
+                            "2021-04-19",
+                            "2021-04-26"
                         ]
                     }
                 ]
@@ -55,14 +165,7 @@ var app = new Vue({
                 "imgSource" : "pics/taschenspezial.png",
                 "price" : "€ 116",
                 "courseList" : []
-            },
-            {
-                "name": "Mein Wunschprojekt",
-                "description": "Ihr braucht spezielle Hilfe mit einem Projekt oder wollt einfach noch ein paar Extraskills lernen? Dann sind die einzelnen Nähabende genau richtig für euch. Ihr könnt die Abende einzeln buchen und besprecht vorher mit mir, was ihr gern machen möchtet.",
-                "imgSource" : "",
-                "price" : "€ 29",
-                "courseList" : []
-            },
+            }
         ]
     },
     computed: {
