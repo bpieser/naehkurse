@@ -189,10 +189,24 @@ var app = new Vue({
           },
     },
     methods: {
+        getDatesFormat(dates){
+            var text = "";
+            var i;
+            for (i = 0; i < dates.length; i++) {
+                text += this.getGermanDateFormat(dates[i]);
+                if (i < dates.length - 1){
+                    text += ", "
+                }
+
+            }
+            return text;
+        },
+
         getGermanDateFormat(dateString){
-            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-            var date = new Date(dateString);
-            return date.toLocaleDateString("de-DE", options)
+            const date = new Date(dateString);
+            const month = new Intl.DateTimeFormat('de-DE', { month: 'short' }).format(date);
+            const day = new Intl.DateTimeFormat('de-DE', { day: '2-digit' }).format(date);
+            return day.concat(". ", month);
         }
     }
 });

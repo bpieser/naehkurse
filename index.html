@@ -112,7 +112,7 @@
                 <tr v-for="item in course.courseList">
                   <td>{{item.title}}</td>
                   <td>
-                    <p class="tinyspace" v-for="date in item.dates">{{getGermanDateFormat(date)}}</p>
+                    <p class="tinyspace">{{getDatesFormat(item.dates)}}</p>
                   </td>
                   <td>19-21 Uhr</td>
                 </tr>
