@@ -110,17 +110,7 @@ var app = new Vue({
                 "description": "Es wird die Tasche “Pop the Corks” aus dem CUT-Magazin Nr12 genäht. Ihr erlernt die Verarbeitung von festen Materialien wie Canvas, Kork oder (Kunst-)Leder sowie von Gurtband, Karabinern, Reißverschlüssen und so weiter. Es handelt sich um eine größere Tasche mit kleinem Innenfach.",
                 "imgSource" : "pics/weekender.png",
                 "price" : "€ 112",
-                "courseList" : [
-                    {
-                        "title": "Weekender",
-                        "dates": [
-                            "2021-03-03",
-                            "2021-03-10",
-                            "2021-03-17",
-                            "2021-03-24"
-                        ]
-                    }
-                ]
+                "courseList" : []
             },
             {
                 "name": "Mein Wunschprojekt",
@@ -172,16 +162,7 @@ var app = new Vue({
         currentCourseList : function() {
             var list = []  
             this.courses.forEach(function(course){
-                var i;
-                for (i = course.courseList.length - 1; i >= 0; i--){
-                    if(course.courseList[i].dates.length > 0){
-                        var startDate = new Date(course.courseList[i].dates[0]);
-                        startDate.setDate(startDate.getDate() + 1);
-                        if (startDate - Date.now() < 0){
-                            course.courseList.splice(i, 1);
-                        }
-                    }
-                }
+                
                 if (course.courseList.length > 0)
                     list.push(course)
             })
