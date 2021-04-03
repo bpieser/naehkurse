@@ -7,7 +7,7 @@ $(document).ready(function(){
         event.preventDefault();
   
         // Store hash
-        var hash = this.hash;
+        const hash = this.hash;
   
         // Using jQuery's animate() method to add smooth page scroll
         // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
@@ -23,9 +23,8 @@ $(document).ready(function(){
     
     $(window).scroll(function() {
       $(".slideanim").each(function(){
-        var pos = $(this).offset().top;
-  
-        var winTop = $(window).scrollTop();
+        const pos = $(this).offset().top;
+        const winTop = $(window).scrollTop();
           if (pos < winTop + 600) {
             $(this).addClass("slide");
           }

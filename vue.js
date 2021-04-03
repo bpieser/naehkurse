@@ -160,23 +160,22 @@ var app = new Vue({
     },
     computed: {
         currentCourseList : function() {
-            var list = []  
+            const list = [];
             this.courses.forEach(function(course){
                 
                 if (course.courseList.length > 0)
-                    list.push(course)
+                    list.push(course);
             })
-            return list
+            return list;
           },
     },
     methods: {
         getDatesFormat(dates){
-            var text = "";
-            var i;
-            for (i = 0; i < dates.length; i++) {
+            let text = "";
+            for (let i = 0; i < dates.length; i++) {
                 text += this.getGermanDateFormat(dates[i]);
                 if (i < dates.length - 1){
-                    text += ", "
+                    text += ", ";
                 }
 
             }
