@@ -11,55 +11,23 @@ var app = new Vue({
                     {
                         "title": "A",
                         "dates": [
-                            "2021-01-11",
-                            "2021-01-18",
-                            "2021-01-25"
+                            "2021-08-30",
+                            "2021-09-06",
+                            "2021-09-13"
                         ]
                     },
                     {
                         "title": "B",
                         "dates": [
-                            "2021-02-08",
-                            "2021-02-15",
-                            "2021-02-22"
-                        ]
-                    },
-                    {
-                        "title": "C",
-                        "dates": [
-                            "2021-02-10",
-                            "2021-02-17",
-                            "2021-02-24"
-                        ]
-                    },
-                    {
-                        "title": "D",
-                        "dates": [
-                            "2021-03-01",
-                            "2021-03-08",
-                            "2021-03-15"
-                        ]
-                    },
-                    {
-                        "title": "E",
-                        "dates": [
-                            "2021-04-14",
-                            "2021-04-21",
-                            "2021-04-28"
-                        ]
-                    },
-                    {
-                        "title": "F",
-                        "dates": [
-                            "2021-04-15",
-                            "2021-04-22",
-                            "2021-04-29"
+                            "2021-09-23",
+                            "2021-09-30",
+                            "2021-10-07"
                         ]
                     }
                 ]
             },
             {
-                "name": "Pulli",
+                "name": "Pulli oder T-Shirt",
                 "description": "Anhand eines gut passenden Pullovers wird ein individueller Schnitt erstellt. Ihr erlernt die Verarbeitung von Sweatshirt-Stoff und Bündchenware. Als fertiges Stück nehmt ihr einen schicken, neuen Pullover bzw. ein Pulli-Kleid mit nach Hause.",
                 "imgSource" : "pics/pulli.png",
                 "price" : "€ 87",
@@ -67,9 +35,9 @@ var app = new Vue({
                     {
                         "title": "Pulli",
                         "dates": [
-                            "2021-01-14",
-                            "2021-01-21",
-                            "2021-01-28"
+                            "2021-08-12",
+                            "2021-08-19",
+                            "2021-08-26"
                         ]
                     }
                 ]
@@ -78,13 +46,13 @@ var app = new Vue({
                 "name": "Leggings",
                 "description": "Leggings sind nicht nur ultrabequem, sondern auch wirklich schnell genäht. Deswegen zeige ich euch in einem Mini-Kurs wie ihr Leggings auch mit einer ganz normalen Haushaltsnähmaschine selber machen könnt. Der Schnitt ist in verschiedenen Größen vorhanden.",
                 "imgSource" : "pics/leggings.png",
-                "price" : "€ 56",
+                "price" : "€ 58",
                 "courseList" : [
                     {
                         "title": "Leggings",
                         "dates": [
-                            "2021-02-11",
-                            "2021-02-18"
+                            "2021-09-20",
+                            "2021-09-27"
                         ]
                     }
                 ]
@@ -98,9 +66,9 @@ var app = new Vue({
                     {
                         "title": "Rock",
                         "dates": [
-                            "2021-02-25",
-                            "2021-03-04",
-                            "2021-03-11"
+                            "2021-09-02",
+                            "2021-09-09",
+                            "2021-09-16"
                         ]
                     }
                 ]
@@ -162,7 +130,16 @@ var app = new Vue({
         currentCourseList : function() {
             const list = [];
             this.courses.forEach(function(course){
-                
+                var i;
+                for (i = course.courseList.length - 1; i >= 0; i--){
+                    if(course.courseList[i].dates.length > 0){
+                        var startDate = new Date(course.courseList[i].dates[0]);
+                        startDate.setDate(startDate.getDate() + 1);
+                        if (startDate - Date.now() < 0){
+                            course.courseList.splice(i, 1);
+                        }
+                    }
+                }
                 if (course.courseList.length > 0)
                     list.push(course);
             })
