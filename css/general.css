@@ -138,7 +138,13 @@ img {
 }
 .panel-body {
     text-align: left;
-    min-height: 470px;
+    /* min-height: 470px; */
+    margin: 10px 15px 10px 15px;
+}
+.panel-body-price {
+    text-align: left;
+    min-height: 140px;
+    margin: 20px 15px 10px 15px;
 }
 .panel-footer .btn:hover {
     border: 1px solid #6e5eb8;

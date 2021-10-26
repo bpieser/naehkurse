@@ -33,7 +33,7 @@
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#courses">Kurse</a></li>
-        <li><a href="#mehr">Angebote</a></li>
+        <li><a href="#mehr">Preise</a></li>
         <li><a href="#about">Über mich</a></li>    
         <li><a href="#adresse">Adresse</a></li>      
         <li><a href="#kontakt">Kontakt</a></li>
@@ -63,14 +63,12 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-sm-12">
-      <p><br /><strong>Hallo und herzlich willkommen bei meinen Nähkursen.</strong></p>
+      <p><br /><strong>Hallo und herzlich willkommen bei meinen Nähkursen,</strong></p>
         <p>
+          über die Winterzeit werde ich ausschließlich Privatkurse bei euch zu Hause geben.
           <br />
-          Juchu! Es dürfen wieder Gruppenkurse stattfinden. Die Daten dazu findet ihr weiter unten auf der Seite.
-          Für Privatnähkurse stehe ich euch ab September gern vormittags wieder zur Verfügung.
-          <br />
-          Da die Hygienebestimmungen hinsichtlich COVID19 ständig im Wandel sind, schicke ich immer kurz vor Beginn des Kurses eine kleine Info mit den aktuellen Auflagen diesbezüglich herum.
-          Jetzt sucht euch den für euch passenden Kurs aus und gebt mir per Mail, SMS, WhatsApp oder Anruf Bescheid, wofür ihr euch interessiert!
+          Hierfür könnt ihr ganz bequem telefonisch oder per Mail Zeiten, Themen und sonstige Wünsche mit mir abstimmen. 
+          In der Regel komme ich für eine Doppelstunde (120 Minuten). Davon könnt ihr so viele buchen, wie ihr möchtet.
         </p>
     </div>
   </div>
@@ -80,44 +78,19 @@
 <div id="courses" class="container-fluid bg-grey">
   <div class="row">
     <div class="col-sm-12">
-      <h2>Kurse</h2>
+      <h2>Mögliche Kursthemen</h2>
     </div>
 
     
-    <div class="col-sm-12" v-for="course in currentCourseList" style="margin-bottom: 10px;">
+    <div class="col-sm-12 col-md-6 col-lg-3" v-for="course in currentCourseList" style="margin-bottom: 10px;">
       <div class="panel panel-default text-center">
         <div class="panel-heading">
           <h3>{{course.name}}</h3>
         </div>        
         <div class="panel-body">
-          <div class="col-sm-12 col-md-6">
-            <p style="margin-top: 7px;">{{course.description}}</p>
-            <br />
+          <div>
             <img :src="course.imgSource" class="img-responsive img-center" style="margin-bottom: 10px;" />
           </div>
-          <div class="col-sm-12 col-md-6">
-            <table class="table table-striped">
-              <thead>
-                <tr>
-                  <th>Kurs</th>
-                  <th>Termine</th>
-                  <th>Zeit</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr v-for="item in course.courseList">
-                  <td>{{item.title}}</td>
-                  <td>
-                    <p class="tinyspace">{{getDatesFormat(item.dates)}}</p>
-                  </td>
-                  <td>19-21 Uhr</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>       
-        </div>
-        <div class="panel-footer">
-         <p><strong>{{course.price}}</strong></p>
         </div>
       </div>
     </div>
@@ -151,33 +124,48 @@
   <div class="row">
 
     <div class="col-sm-12">
-      <h2>Angebote</h2>
+      <h2>Preise</h2>
     </div>
 
-    <div class="col-sm-6 col-md-6 col-xs-12">
+    <div class="col-sm-6 col-md-4 col-xs-12">
       <div class="panel panel-default text-center">
         <div class="panel-heading">
-          <h3>Privatnähkurse</h3>
+          <h3>1 Person</h3>
         </div>
-        <div class="panel-body" style="min-height: 160px;">
-          <p>Gern komme ich auch zum Nähen zu euch nach Hause. 
-            Bei einer Person nehme ich 35€ die Stunde, seid ihr zu zweit, nehme ich 25€ pro Person pro Stunde. 
+        <div class="panel-body-price">
+          <p>Privatnähkurs für eine Doppelstunde (120 Minuten).<br />
             Ruft mich einfach an und wir schauen zusammen im Kalender nach.
           </p>
         </div>
         <div class="panel-footer">
-          <p><strong>€ 35 / € 25</strong></p>
+          <p><strong>€ 70</strong></p>
         </div>
       </div>
     </div>
 
-    <div class="col-sm-6 col-md-6 col-xs-12">
+    <div class="col-sm-6 col-md-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h3>2 Personen</h3>
+        </div>
+        <div class="panel-body-price">
+          <p>Privatnähkurs für eine Doppelstunde (120 Minuten).<br />
+            Ruft mich einfach an und wir schauen zusammen im Kalender nach.
+          </p>
+        </div>
+        <div class="panel-footer">
+          <p><strong>€ 100</strong></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-6 col-md-4 col-xs-12">
       <div class="panel panel-default text-center">
         <div class="panel-heading">
           <h3>Gutscheine</h3>
         </div>
-        <div class="panel-body" style="min-height: 160px;">
-          <p>Natürlich ist es möglich die Nähkurse als Gutschein zu verschenken. 
+        <div class="panel-body-price">
+          <p>Natürlich ist es möglich die Nähkurse als Gutschein zu verschenken. <br />
             Besprecht mit mir eure Vorstellungen und ich stelle euch den Gutschein aus, den ihr braucht.
           </p>
         </div>

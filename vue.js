@@ -43,7 +43,7 @@ var app = new Vue({
                 ]
             },
             {
-                "name": "Leggings",
+                "name": "Leggings / Jogginghose",
                 "description": "Leggings sind nicht nur ultrabequem, sondern auch wirklich schnell genäht. Deswegen zeige ich euch in einem Mini-Kurs wie ihr Leggings auch mit einer ganz normalen Haushaltsnähmaschine selber machen könnt. Der Schnitt ist in verschiedenen Größen vorhanden.",
                 "imgSource" : "pics/leggings.png",
                 "price" : "€ 58",
@@ -53,6 +53,20 @@ var app = new Vue({
                         "dates": [
                             "2021-09-20",
                             "2021-09-27"
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Baby-/ Kinderkleidung",
+                "description": "Kurs für Babykleidung",
+                "imgSource" : "pics/baby.png",
+                "price" : "€ 87",
+                "courseList" : [
+                    {
+                        "title": "Babykleidung",
+                        "dates": [
+                            "2020-03-18"
                         ]
                     }
                 ]
@@ -74,27 +88,6 @@ var app = new Vue({
                 ]
             },
             {
-                "name": "Weekender Tasche",
-                "description": "Es wird die Tasche “Pop the Corks” aus dem CUT-Magazin Nr12 genäht. Ihr erlernt die Verarbeitung von festen Materialien wie Canvas, Kork oder (Kunst-)Leder sowie von Gurtband, Karabinern, Reißverschlüssen und so weiter. Es handelt sich um eine größere Tasche mit kleinem Innenfach.",
-                "imgSource" : "pics/weekender.png",
-                "price" : "€ 112",
-                "courseList" : []
-            },
-            {
-                "name": "Mein Wunschprojekt",
-                "description": "Ihr braucht spezielle Hilfe mit einem Projekt oder wollt einfach noch ein paar Extraskills lernen? Dann sind die einzelnen Nähabende genau richtig für euch. Ihr könnt die Abende einzeln buchen und besprecht vorher mit mir, was ihr gern machen möchtet.",
-                "imgSource" : "pics/alleProdukte.png",
-                "price" : "€ 29",
-                "courseList" : [
-                    {
-                        "title": "Wunschprojekt",
-                        "dates": [
-                            "2021-03-18"
-                        ]
-                    }
-                ]
-            },
-            {
                 "name": "T-Shirt",
                 "description": "Anhand eines gut passenden T-Shirts wird ein individueller Schnitt erstellt. Ihr erlernt die Verarbeitung von Jersey und Bündchenware. Als fertiges Stück nehmt Ihr ein schickes, neues T-Shirt oder Shirt-Kleid mit nach Hause.",
                 "imgSource" : "pics/tshirt.png",
@@ -111,18 +104,18 @@ var app = new Vue({
                 ]
             },
             {
-                "name": "Kinderkleidung",
-                "description": "Genäht wird mit dem Schnittmuster  \"Jogginganzug Maren\" von Farbenmix.  Dabei wählt ihr selber aus, ob ihr die Jogginghose oder -jacke aus dem Schnittset nähen wollt.",
-                "imgSource" : "pics/stoffcollage.png",
-                "price" : "€ 87",
-                "courseList" : []
-            },
-            {
-                "name": "Taschenspezial mit Kate",
-                "description": "Es werden verschiedene Schnittelemente und Schmuckelemente besprochen. Mit diesem Wissen und unter professioneller Anleitung werdet ihr euch zunächst eure eigene Schultertasche designen und anschließend nähen. Dabei werdet ihr lernen, wie ihr feste Stoffe wie Kunstleder, aber auch Reißverschlüsse, Gurtbänder und verschiedene Vliese verarbeitet. Die Kursleiterin Kate hat jahrelang Taschen gewerblich designt und genäht und hat allerhand Insiderwissen.",
-                "imgSource" : "pics/taschenspezial.png",
-                "price" : "€ 116",
-                "courseList" : []
+                "name": "Mein Wunschprojekt",
+                "description": "Ihr braucht spezielle Hilfe mit einem Projekt oder wollt einfach noch ein paar Extraskills lernen? Dann sind die einzelnen Nähabende genau richtig für euch. Ihr könnt die Abende einzeln buchen und besprecht vorher mit mir, was ihr gern machen möchtet.",
+                "imgSource" : "pics/alleProdukte.png",
+                "price" : "€ 29",
+                "courseList" : [
+                    {
+                        "title": "Wunschprojekt",
+                        "dates": [
+                            "2021-03-18"
+                        ]
+                    }
+                ]
             }
         ]
     },
@@ -131,7 +124,7 @@ var app = new Vue({
             const list = [];
             this.courses.forEach(function(course){
                 var i;
-                for (i = course.courseList.length - 1; i >= 0; i--){
+                /*for (i = course.courseList.length - 1; i >= 0; i--){
                     if(course.courseList[i].dates.length > 0){
                         var startDate = new Date(course.courseList[i].dates[0]);
                         startDate.setDate(startDate.getDate() + 1);
@@ -139,7 +132,7 @@ var app = new Vue({
                             course.courseList.splice(i, 1);
                         }
                     }
-                }
+                }*/
                 if (course.courseList.length > 0)
                     list.push(course);
             })
