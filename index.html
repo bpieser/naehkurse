@@ -32,10 +32,10 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#courses">Kurse</a></li>
-        <li><a href="#mehr">Preise</a></li>
+        <li><a href="#courses">Gruppen-Kurse</a></li>
+        <li><a href="#mehr">Privat-Kurse</a></li>
         <li><a href="#about">Über mich</a></li>    
-        <li><a href="#adresse">Adresse</a></li>      
+        <!--<li><a href="#adresse">Adresse</a></li>-->      
         <li><a href="#kontakt">Kontakt</a></li>
       </ul>
     </div>
@@ -59,41 +59,92 @@
   </div>
 </div>
 -->
-
 <div class="container-fluid">
-  <div class="row">
+  <div class="row mainContent">
     <div class="col-sm-12">
-      <p><br /><strong>Hallo und herzlich willkommen bei meinen Nähkursen,</strong></p>
-        <p>
-          Ich komme sehr gern für private Nähstunden zu euch nach Hause und richte mich absolut nach euren Wünschen. </br> 
-          Die Lerninhalte und Termine werden immer gemeinsam vorher besprochen, sodass ihr genau das bekommt, was ihr gerade braucht. 
-          Nähmaschinen, sämtliches Nähzubehör (Scheren, Nadeln und so weiter…) sowie Reststoffe zum Rumprobieren stell ich jederzeit gern zur Verfügung. 
-        </p>
-        <p>
-          Ich kann bis zu fünf Nähmaschinen mitbringen, sodass auch Kurse in kleineren Gruppen bei euch zu Hause möglich sind.
-        </p>
+      <p><br />
+        Yay, die beliebten <a href="#courses">Gruppen-Kurse</a> sind zurück.<br />
+        Ab Januar 2026 finden diese in einem schönen Raum in der Knausstraße 18 im Grunewald statt. 
+        Sucht euch unten euer Wunschthema raus und kontaktiert mich per Mail oder Telefon. 
+      </p>
+      <br />
+      <p><strong>Was ihr bekommt?</strong></p>
+      <div class="listCheck">
+        <ul>
+          <li>Schnelles und entspanntes Lernen in kleinen Gruppen (maximal 4 Schüler*Innen)</li>
+          <li>Detaillierte Schritt-für-Schritt Anleitungen</li>
+          <li>Ein bebildertes Handout zu den vermittelten Kursinhalten</li>
+          <li>Bei Bedarf Nutzung meiner Nähmaschinen (ohne Aufpreis)</li>
+          <li>Lustige und kreative Abende</li>
+          <li>Mich ;) Ihr könnt von all meinen privaten Versuchs-und Irrtums-Erfahrungen sowie über zehn Jahren Erfahrung als Nählehrerin profitieren.</li>
+        </ul>
+      </div>      
+      <p><br /></p>
+      <p>
+        Nach wie vor komme ich auch sehr gern für <a href="#mehr">private Nähstunden</a> zu euch nach Hause und richte mich absolut nach euren Wünschen. <br />
+        Die Lerninhalte und Termine werden immer gemeinsam vorher besprochen, sodass ihr genau das bekommt, was ihr gerade braucht. 
+        Nähmaschinen, sämtliches Nähzubehör (Scheren, Nadeln und so weiter…) sowie Reststoffe zum Rumprobieren stelle ich jederzeit gern zur Verfügung.
+      </p>
+      <p>
+        Ich kann bis zu fünf Nähmaschinen mitbringen, sodass auch Kurse in kleineren Gruppen bei euch zu Hause möglich sind.
+      </p>
     </div>
   </div>
 </div>
 
 <!-- Container (Kurse) -->
 <div id="courses" class="container-fluid bg-grey">
-  <div class="row">
+  <div class="row bg-grey mainContent">
     <div class="col-sm-12">
-      <h2>Mögliche Kursthemen</h2>
+      <h2>Gruppen-Kurse</h2>
     </div>
-
-    
-    <div class="col-sm-12 col-md-6 col-lg-3" v-for="course in currentCourseList" style="margin-bottom: 10px;">
+    <div class="col-sm-12 listOption">
+      <ul>
+        <li>Knausstraße 18, 14193 Berlin</li>
+      </ul>
+      <p><br /></p>
+    </div>       
+    <div class="col-sm-12 col-md-12 col-lg-12" v-for="course in currentCourseList" style="margin-bottom: 10px;">
       <div class="panel panel-default text-center">
         <div class="panel-heading">
           <h3>{{course.name}}</h3>
         </div>
         <div class="panel-body">
           <div>
-            <img :src="course.imgSource" class="img-responsive img-center" style="margin-bottom: 10px;" />
+            <p style="margin-top: 7px;">{{course.description}}</p>
+            <div class="listOption">
+              <ul v-for="info in course.infoList">
+                <li><strong>{{info.name}}</strong><br />{{info.description}}</li>
+              </ul>
+            </div>
+            <div class="col-sm-12 col-md-6">              
+              <img :src="course.imgSource" class="img-responsive img-center" style="margin-top:25pt; margin-bottom:10pt" />
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Kurs</th>
+                  <th>Termine</th>
+                  <th>Zeit</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr v-for="item in course.courseList">
+                  <td>{{item.title}}</td>
+                  <td>
+                    <p class="tinyspace">{{getDatesFormat(item.dates)}}</p>
+                  </td>
+                  <td>19-21 Uhr</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
+        <div class="panel-footer">
+          <p><strong>{{course.price}}</strong></p>
+         </div>
       </div>
     </div>
 
@@ -111,11 +162,11 @@
 
 
 <!-- Container (Mehr) -->
-<div id="mehr" class="container-fluid bg-grey">
-  <div class="row">
+<div id="mehr" class="container-fluid">
+  <div class="row mainContent">
 
     <div class="col-sm-12">
-      <h2>Preise</h2>
+      <h2>Privat-Kurse</h2>
     </div>
 
     <div class="col-sm-6 col-lg-3 col-xs-12">
@@ -129,7 +180,7 @@
           </p>
         </div>
         <div class="panel-footer">
-          <p><strong>€ 90</strong></p>
+          <p><strong>€ 100</strong></p>
         </div>
       </div>
     </div>
@@ -145,7 +196,7 @@
           </p>
         </div>
         <div class="panel-footer">
-          <p><strong>€ 120</strong></p>
+          <p><strong>€ 150</strong></p>
         </div>
       </div>
     </div>
@@ -161,7 +212,7 @@
           </p>
         </div>
         <div class="panel-footer">
-          <p><strong>€ 150</strong></p>
+          <p><strong>€ 200</strong></p>
         </div>
       </div>
     </div>
@@ -196,8 +247,8 @@
 
 
 <!-- Container (Über mich) -->
-<div id="about" class="container-fluid">
-  <div class="row">
+<div id="about" class="container-fluid bg-grey">
+  <div class="row mainContent">
     <div class="col-sm-12">
       <h2>Über mich</h2>
       <img class="floatingImageAnne" src="pics/anne.jpg" alt="Anne" />
@@ -224,8 +275,9 @@
   </div>
 </div>
 
-<div id="adresse" class="container-fluid bg-grey">
-  <div class="row">
+<!--
+<div id="adresse" class="container-fluid">
+  <div class="row mainContent">
     <div class="col-sm-12">
       <h2>Adresse</h2>
       <p><span class="glyphicon glyphicon-map-marker"></span> Teltower Damm 32, 14169 Berlin</p>
@@ -233,10 +285,11 @@
     </div>
   </div>
 </div>
+-->
 
 <!-- Container (Contact Section) -->
 <div id="kontakt" class="container-fluid">
-  <div class="row">
+  <div class="row mainContent">
     <div class="col-sm-12">
       <h2>Kontakt</h2>
       <p>Für Anmeldungen und Fragen:</p>

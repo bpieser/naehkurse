@@ -3,61 +3,70 @@ var app = new Vue({
     data: {
         "courses": [            
             {
-                "name": "Anfänger",
-                "description": "Ihr erlernt die Bedienung der Nähmaschine von Grund auf (Unterfaden aufspulen, einfädeln, geradeaus nähen,  um die Ecke nähen, Schnittkanten versäubern...). Als fertiges Werkstück entsteht ein gefüttertes Täschchen mit Reißverschluss.",
+                "name": "Anfängerkurs „Täschchen nähen\"",
+                "description": "In entspannter Atmosphäre zeige ich euch die Grundlagen in der Bedienung einer Nähmaschine. Als erstes Projekt wird ein gefüttertes Täschchen mit Reißverschluss genäht.",
                 "imgSource" : "pics/tasche.png",
-                "price" : "€ 87",
+                "price" : "€ 120",
                 "courseList": [
                     {
-                        "title": "A",
+                        "title": "Täschchen A",
                         "dates": [
-                            "2021-08-30",
-                            "2021-09-06",
-                            "2021-09-13"
+                            "2026-01-06",
+                            "2026-01-13",
+                            "2026-01-20"
                         ]
                     },
                     {
-                        "title": "B",
+                        "title": "Täschchen B",
                         "dates": [
-                            "2021-09-23",
-                            "2021-09-30",
-                            "2021-10-07"
+                            "2026-04-14",
+                            "2026-04-21",
+                            "2026-04-28"
                         ]
                     }
                 ]
             },
             {
-                "name": "Pulli oder T-Shirt",
-                "description": "Anhand eines gut passenden Pullovers wird ein individueller Schnitt erstellt. Ihr erlernt die Verarbeitung von Sweatshirt-Stoff und Bündchenware. Als fertiges Stück nehmt ihr einen schicken, neuen Pullover bzw. ein Pulli-Kleid mit nach Hause.",
+                "name": "Pullover nähen",
+                "description": "Ihr bringt einen gutpassenden Lieblings-Pulli mit und ich zeige euch, wie ihr davon den Schnitt abnehmt und ihn gegebenenfalls verändert. Anschließend näht ihr unter meiner Anleitung den Pulli.",
                 "imgSource" : "pics/pulli.png",
-                "price" : "€ 87",
+                "price" : "€ 120",
                 "courseList" : [
                     {
                         "title": "Pulli",
                         "dates": [
-                            "2021-08-12",
-                            "2021-08-19",
-                            "2021-08-26"
+                            "2026-01-27",
+                            "2026-02-03",
+                            "2026-02-10"
                         ]
                     }
                 ]
             },
             {
-                "name": "Leggings / Jogginghose",
-                "description": "Leggings sind nicht nur ultrabequem, sondern auch wirklich schnell genäht. Deswegen zeige ich euch in einem Mini-Kurs wie ihr Leggings auch mit einer ganz normalen Haushaltsnähmaschine selber machen könnt. Der Schnitt ist in verschiedenen Größen vorhanden.",
+                "name": "Anfängerkurs „Leggings nähen\"",
+                "description": "In entspannter Atmosphäre zeige ich euch die Grundlagen in der Bedienung einer Nähmaschine. Als erstes Projekt wird eine Leggings genäht. (Keine Angst vor dehnbaren Stoffen. Ich bin bei euch.) Schnitte hierfür bringe ich mit. Eure Größe erfrage ich vorher.",
                 "imgSource" : "pics/leggings.png",
-                "price" : "€ 58",
+                "price" : "€ 120",
                 "courseList" : [
                     {
-                        "title": "Leggings",
+                        "title": "Leggings A",
                         "dates": [
-                            "2021-09-20",
-                            "2021-09-27"
+                            "2026-02-17",
+                            "2026-02-24",
+                            "2026-03-03"
+                        ]
+                    },
+                    {
+                        "title": "Leggings B",
+                        "dates": [
+                            "2026-06-02",
+                            "2026-06-09",
+                            "2026-06-16"
                         ]
                     }
                 ]
             },
-            {
+            /*{
                 "name": "Baby-/ Kinderkleidung",
                 "description": "Kurs für Babykleidung",
                 "imgSource" : "pics/baby.png",
@@ -70,40 +79,62 @@ var app = new Vue({
                         ]
                     }
                 ]
+            },*/
+            {
+                "name": "T-Shirt nähen",
+                "description": "Ihr bringt ein gutpassendes Lieblings-T-Shirt mit und ich zeige euch, wie ihr davon den Schnitt abnehmt und ihn gegebenenfalls verändert. Anschließend näht ihr unter meiner Anleitung das T-Shirt.",
+                "imgSource" : "pics/tshirt.png",
+                "price" : "€ 120",
+                "courseList" : [
+                    {
+                        "title": "T-Shirt A",
+                        "dates": [
+                            "2026-03-10",
+                            "2026-03-17",
+                            "2026-03-24"
+                        ]
+                    },
+                    {
+                        "title": "T-Shirt B",
+                        "dates": [
+                            "2026-06-23",
+                            "2026-06-30",
+                            "2026-07-07"
+                        ]
+                    }
+                ]
             },
             {
-                "name": "A-Linien-Rock",
-                "description": "Lernt in diesem Kurs, wie ihr einen A-Linien-Rock näht. Die Schnitte sind in verschiedenen Größen vorhanden und bei Bedarf zeig ich euch, wie ihr individuelle Anpassungen vornehmen könnt. Ganz nebenbei lernt ihr, wie ihr schöne Abnäher näht und wie nahtverdeckte Reißverschlüsse verarbeitet werden.",
-                "imgSource" : "pics/arock.png",
-                "price" : "€ 87",
+                "name": "Rock nähen",
+                "description": "Mit Hilfe von einfachen geometrischen Formen zeige ich euch, wie ihr den Schnitt für einen Rock selber konstruiert und ihn anschließend natürlich auch näht. Es wird nach dem Tellerrock-Prinzip gearbeitet. Möglich sind folgende Optionen:",
+                "infoList" : [
+                    {
+                        "name": "Ganzer Tellerrock",
+                        "description" : "Der ganze Tellerrock ist vom Schnitt-Prinzip ein kompletter Kreis, schwingt sehr weit und fällt (je nach Stoff mehr oder weniger) in schönen dramatischen Falten. "
+                    },
+                    {
+                        "name": "Halber Tellerrock",
+                        "description" : "Der halbe Tellerrock ist vom Schnitt-Prinzip ein Halbkreis, welcher an den geraden Seiten zusammengenäht wird, fällt auch wirklich schön, aber nicht so üppig wie der ganze Tellerrock und verbraucht etwas weniger Stoff. "
+                    },
+                    {
+                        "name": "Viertel Tellerrock",
+                        "description" : "Ein viertel Tellerrock ist vom Schnitt-Prinzip ein Viertel eines Kreis´, welches an den geraden Seiten zusammengenäht wird. Er bietet immer noch genügend Bewegungsfreiheit, fällt aber eher gerade in A-Linie und ohne die weichen Falten. Außerdem zeige ich im Rock-Kurs auch, wie man einen nahtverdeckten Reißverschluss einnäht."
+                    },
+                ],
+                "imgSource" : "pics/tellerrock.png",
+                "price" : "€ 120",
                 "courseList" : [
                     {
                         "title": "Rock",
                         "dates": [
-                            "2021-09-02",
-                            "2021-09-09",
-                            "2021-09-16"
+                            "2026-05-05",
+                            "2026-05-12",
+                            "2026-05-19"
                         ]
                     }
                 ]
             },
-            {
-                "name": "T-Shirt",
-                "description": "Anhand eines gut passenden T-Shirts wird ein individueller Schnitt erstellt. Ihr erlernt die Verarbeitung von Jersey und Bündchenware. Als fertiges Stück nehmt Ihr ein schickes, neues T-Shirt oder Shirt-Kleid mit nach Hause.",
-                "imgSource" : "pics/tshirt.png",
-                "price" : "€ 87",
-                "courseList" : [
-                    {
-                        "title": "Shirt",
-                        "dates": [
-                            "2021-04-12",
-                            "2021-04-19",
-                            "2021-04-26"
-                        ]
-                    }
-                ]
-            },
-            {
+            /*{
                 "name": "Mein Wunschprojekt",
                 "description": "Ihr braucht spezielle Hilfe mit einem Projekt oder wollt einfach noch ein paar Extraskills lernen? Dann sind die einzelnen Nähabende genau richtig für euch. Ihr könnt die Abende einzeln buchen und besprecht vorher mit mir, was ihr gern machen möchtet.",
                 "imgSource" : "pics/alleProdukte.png",
@@ -116,7 +147,7 @@ var app = new Vue({
                         ]
                     }
                 ]
-            }
+            }*/
         ]
     },
     computed: {
@@ -124,7 +155,7 @@ var app = new Vue({
             const list = [];
             this.courses.forEach(function(course){
                 var i;
-                /*for (i = course.courseList.length - 1; i >= 0; i--){
+                for (i = course.courseList.length - 1; i >= 0; i--){
                     if(course.courseList[i].dates.length > 0){
                         var startDate = new Date(course.courseList[i].dates[0]);
                         startDate.setDate(startDate.getDate() + 1);
@@ -132,7 +163,7 @@ var app = new Vue({
                             course.courseList.splice(i, 1);
                         }
                     }
-                }*/
+                }
                 if (course.courseList.length > 0)
                     list.push(course);
             })
