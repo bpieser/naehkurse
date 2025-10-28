@@ -28,10 +28,14 @@ h4 {
     margin-bottom: 0px;
     font-family: Montserrat, sans-serif;
 }
-.mainContent{
-    margin-left: 7pt;
-    margin-right: 7pt;
-}
+
+@media all and (min-width: 600px) {
+    .mainContent {
+        margin-left: 8pt;
+        margin-right: 8pt;
+    }
+  }
+
 .container-fluid {
     padding: 60px 15px;
 }
