@@ -7,64 +7,21 @@ var app = new Vue({
                 "description": "In entspannter Atmosphäre zeige ich euch die Grundlagen in der Bedienung einer Nähmaschine. Als erstes Projekt wird ein gefüttertes Täschchen mit Reißverschluss genäht.",
                 "imgSource" : "pics/tasche.png",
                 "price" : "€ 120",
-                "courseList": [
-                    {
-                        "title": "Täschchen A",
-                        "dates": [
-                            "2026-01-06",
-                            "2026-01-13",
-                            "2026-01-20"
-                        ]
-                    },
-                    {
-                        "title": "Täschchen B",
-                        "dates": [
-                            "2026-04-14",
-                            "2026-04-21",
-                            "2026-04-28"
-                        ]
-                    }
-                ]
+                "courseList": []
             },
             {
                 "name": "Pullover nähen",
                 "description": "Ihr bringt einen gutpassenden Lieblings-Pulli mit und ich zeige euch, wie ihr davon den Schnitt abnehmt und ihn gegebenenfalls verändert. Anschließend näht ihr unter meiner Anleitung den Pulli.",
                 "imgSource" : "pics/pulli.png",
                 "price" : "€ 120",
-                "courseList" : [
-                    {
-                        "title": "Pulli",
-                        "dates": [
-                            "2026-01-27",
-                            "2026-02-03",
-                            "2026-02-10"
-                        ]
-                    }
-                ]
+                "courseList" : []
             },
             {
                 "name": "Anfängerkurs „Leggings nähen\"",
                 "description": "In entspannter Atmosphäre zeige ich euch die Grundlagen in der Bedienung einer Nähmaschine. Als erstes Projekt wird eine Leggings genäht. (Keine Angst vor dehnbaren Stoffen. Ich bin bei euch.) Schnitte hierfür bringe ich mit. Eure Größe erfrage ich vorher.",
                 "imgSource" : "pics/leggings.png",
                 "price" : "€ 120",
-                "courseList" : [
-                    {
-                        "title": "Leggings A",
-                        "dates": [
-                            "2026-02-17",
-                            "2026-02-24",
-                            "2026-03-03"
-                        ]
-                    },
-                    {
-                        "title": "Leggings B",
-                        "dates": [
-                            "2026-06-02",
-                            "2026-06-09",
-                            "2026-06-16"
-                        ]
-                    }
-                ]
+                "courseList" : []
             },
             /*{
                 "name": "Baby-/ Kinderkleidung",
@@ -85,24 +42,7 @@ var app = new Vue({
                 "description": "Ihr bringt ein gutpassendes Lieblings-T-Shirt mit und ich zeige euch, wie ihr davon den Schnitt abnehmt und ihn gegebenenfalls verändert. Anschließend näht ihr unter meiner Anleitung das T-Shirt.",
                 "imgSource" : "pics/tshirt.png",
                 "price" : "€ 120",
-                "courseList" : [
-                    {
-                        "title": "T-Shirt A",
-                        "dates": [
-                            "2026-03-10",
-                            "2026-03-17",
-                            "2026-03-24"
-                        ]
-                    },
-                    {
-                        "title": "T-Shirt B",
-                        "dates": [
-                            "2026-06-23",
-                            "2026-06-30",
-                            "2026-07-07"
-                        ]
-                    }
-                ]
+                "courseList" : []
             },
             {
                 "name": "Rock nähen",
@@ -127,9 +67,9 @@ var app = new Vue({
                     {
                         "title": "Rock",
                         "dates": [
-                            "2026-05-05",
-                            "2026-05-12",
-                            "2026-05-19"
+                            "2026-04-14",
+                            "2026-04-21",
+                            "2026-04-28"
                         ]
                     }
                 ]
