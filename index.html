@@ -25,11 +25,11 @@
   <meta name="twitter:description" content="Nähkurse in Berlin mit Anne Pieser. Gruppen-Nähkurse in Berlin-Grunewald in kleinen Gruppen bis 4 Personen. Privat-Nähkurse bei Ihnen zu Hause.">
   <meta name="twitter:image" content="https://naehkurse-anne-pieser.de/pics/header.png">
   
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" type="text/css" href="css/general.css?v=1.3">
+  <link rel="stylesheet" type="text/css" href="css/general.css?v=1.4">
   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.min.js"></script>
@@ -47,8 +47,8 @@
     </button>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="#courses">Gruppen-Kurse</a></li>
-        <li class="nav-item"><a class="nav-link" href="#mehr">Privat-Kurse</a></li>
+        <li class="nav-item"><a class="nav-link" href="#courses">Kurse</a></li>
+        <li class="nav-item"><a class="nav-link" href="#mehr">Preise</a></li>
         <li class="nav-item"><a class="nav-link" href="#about">Über mich</a></li>
         <li class="nav-item"><a class="nav-link" href="#kontakt">Kontakt</a></li>
       </ul>
@@ -76,28 +76,11 @@
 <div class="container-fluid">
   <div class="row mainContent">
     <div class="col-sm-12">
-      <p><br />
-        Yay, die beliebten <a href="#courses">Gruppen-Kurse</a> sind zurück.<br />
-        Ab Januar 2026 finden diese in einem schönen Raum in der Knausstraße 18 im Grunewald statt. 
-        Sucht euch unten euer Wunschthema raus und kontaktiert mich per Mail oder Telefon. 
-      </p>
-      <br />
-      <p><strong>Was ihr bekommt?</strong></p>
-      <div class="listCheck">
-        <ul>
-          <li>Schnelles und entspanntes Lernen in kleinen Gruppen (maximal 4 Schüler*Innen)</li>
-          <li>Detaillierte Schritt-für-Schritt Anleitungen</li>
-          <li>Ein bebildertes Handout zu den vermittelten Kursinhalten</li>
-          <li>Bei Bedarf Nutzung meiner Nähmaschinen (ohne Aufpreis)</li>
-          <li>Lustige und kreative Abende</li>
-          <li>Mich ;) Ihr könnt von all meinen privaten Versuchs-und Irrtums-Erfahrungen sowie über zehn Jahren Erfahrung als Nählehrerin profitieren.</li>
-        </ul>
-      </div>      
-      <p><br /></p>
+      <p><br /><strong>Hallo und herzlich willkommen bei meinen Nähkursen,</strong></p>
       <p>
-        Nach wie vor komme ich auch sehr gern für <a href="#mehr">private Nähstunden</a> zu euch nach Hause und richte mich absolut nach euren Wünschen. <br />
+        Ich komme sehr gern für private Nähstunden zu euch nach Hause und richte mich absolut nach euren Wünschen. </br> 
         Die Lerninhalte und Termine werden immer gemeinsam vorher besprochen, sodass ihr genau das bekommt, was ihr gerade braucht. 
-        Nähmaschinen, sämtliches Nähzubehör (Scheren, Nadeln und so weiter…) sowie Reststoffe zum Rumprobieren stelle ich jederzeit gern zur Verfügung.
+        Nähmaschinen, sämtliches Nähzubehör (Scheren, Nadeln und so weiter…) sowie Reststoffe zum Rumprobieren stell ich jederzeit gern zur Verfügung. 
       </p>
       <p>
         Ich kann bis zu fünf Nähmaschinen mitbringen, sodass auch Kurse in kleineren Gruppen bei euch zu Hause möglich sind.
@@ -110,69 +93,20 @@
 <div id="courses" class="container-fluid bg-grey">
   <div class="row bg-grey mainContent">
     <div class="col-sm-12">
-      <h2>Gruppen-Kurse</h2>
+      <h2>Mögliche Kursthemen</h2>
     </div>
-    <div class="col-sm-12 listOption">
-      <ul>
-        <li>Knausstraße 18, 14193 Berlin</li>
-      </ul>
-      <p><br /></p>
-    </div>       
-    <div class="col-sm-12 col-md-12 col-lg-12" v-for="course in currentCourseList" style="margin-bottom: 10px;">
+    <div class="col-sm-12 col-md-6 col-lg-4" v-for="course in courses" style="margin-bottom: 10px;">
       <div class="card text-center">
         <div class="card-header">
           <h3>{{course.name}}</h3>
         </div>
-        <div class="card-body">
-            <div>
-                <p style="margin-top: 7px;">{{course.description}}</p>
-                <div class="listOption">
-                    <ul v-for="info in course.infoList">
-                        <li><strong>{{info.name}}</strong><br />{{info.description}}</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="row justify-content-center g-3">
-                <div class="col-sm-12 col-md-5">
-                    <img :src="course.imgSource" class="img-fluid img-center" style="margin-top:25pt; margin-bottom:10pt" />
-                </div>
-                <div class="col-sm-12 col-md-5 col-lg-6">
-                    <table class="table table-striped">
-                        <thead>
-                            <tr>
-                                <th>Kurs</th>
-                                <th>Termine</th>
-                                <th>Zeit</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr v-for="item in course.courseList">
-                                <td>{{item.title}}</td>
-                                <td>
-                                    <p class="tinyspace">{{getDatesFormat(item.dates)}}</p>
-                                </td>
-                                <td>19-21 Uhr</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+        <div class="card-body-price">
+          <div>
+            <img :src="course.imgSource" class="img-responsive" style="margin-bottom: 10px;" />
+          </div>
         </div>
-        <div class="card-footer">
-          <p><strong>{{course.price}}</strong></p>
-         </div>
       </div>
-    </div>
-
-    <div class="col-sm-12">
-        <div class="panel-group">
-            <p><strong>Hinweis:</strong></p>
-            <p>
-              Die Materialien sind nicht mit im Kurspreis enthalten und müssen selbständig mitgebracht werden. Welche das sind, wird immer im Vorfeld und individuell auf euer Projekt bezogen besprochen.
-            </p>
-        </div>
-    </div>
-    
+    </div>    
   </div>
 </div>
 
@@ -182,7 +116,7 @@
   <div class="row mainContent">
 
     <div class="col-sm-12">
-      <h2>Privat-Kurse</h2>
+      <h2>Preise</h2>
     </div>
 
     <div class="col-sm-6 col-lg-3">
@@ -325,9 +259,9 @@
     anne.pieser@gmail.com, 0174 7157599, Steuernummer: 25 / 471/00449</p>
 </footer>
 
-<script src="vue.js?v=1.2"></script>
+<script src="vue.js?v=1.4"></script>
 
-<script src="index.js?v=1.2"></script>
+<script src="index.js?v=1.4"></script>
 
 </body>
 </html>

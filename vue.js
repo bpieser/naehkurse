@@ -3,7 +3,7 @@ var app = new Vue({
     data: {
         "courses": [            
             {
-                "name": "Anfängerkurs „Täschchen nähen\"",
+                "name": "Täschchen nähen",
                 "description": "In entspannter Atmosphäre zeige ich euch die Grundlagen in der Bedienung einer Nähmaschine. Als erstes Projekt wird ein gefüttertes Täschchen mit Reißverschluss genäht.",
                 "imgSource" : "pics/tasche.png",
                 "price" : "€ 120",
@@ -17,13 +17,13 @@ var app = new Vue({
                 "courseList" : []
             },
             {
-                "name": "Anfängerkurs „Leggings nähen\"",
+                "name": "Leggings nähen",
                 "description": "In entspannter Atmosphäre zeige ich euch die Grundlagen in der Bedienung einer Nähmaschine. Als erstes Projekt wird eine Leggings genäht. (Keine Angst vor dehnbaren Stoffen. Ich bin bei euch.) Schnitte hierfür bringe ich mit. Eure Größe erfrage ich vorher.",
                 "imgSource" : "pics/leggings.png",
                 "price" : "€ 120",
                 "courseList" : []
             },
-            /*{
+            {
                 "name": "Baby-/ Kinderkleidung",
                 "description": "Kurs für Babykleidung",
                 "imgSource" : "pics/baby.png",
@@ -36,7 +36,7 @@ var app = new Vue({
                         ]
                     }
                 ]
-            },*/
+            },
             {
                 "name": "T-Shirt nähen",
                 "description": "Ihr bringt ein gutpassendes Lieblings-T-Shirt mit und ich zeige euch, wie ihr davon den Schnitt abnehmt und ihn gegebenenfalls verändert. Anschließend näht ihr unter meiner Anleitung das T-Shirt.",
@@ -66,15 +66,11 @@ var app = new Vue({
                 "courseList" : [
                     {
                         "title": "Rock",
-                        "dates": [
-                            "2026-04-14",
-                            "2026-04-21",
-                            "2026-04-28"
-                        ]
+                        "dates": []
                     }
                 ]
             },
-            /*{
+            {
                 "name": "Mein Wunschprojekt",
                 "description": "Ihr braucht spezielle Hilfe mit einem Projekt oder wollt einfach noch ein paar Extraskills lernen? Dann sind die einzelnen Nähabende genau richtig für euch. Ihr könnt die Abende einzeln buchen und besprecht vorher mit mir, was ihr gern machen möchtet.",
                 "imgSource" : "pics/alleProdukte.png",
@@ -82,12 +78,10 @@ var app = new Vue({
                 "courseList" : [
                     {
                         "title": "Wunschprojekt",
-                        "dates": [
-                            "2021-03-18"
-                        ]
+                        "dates": []
                     }
                 ]
-            }*/
+            }
         ]
     },
     computed: {
